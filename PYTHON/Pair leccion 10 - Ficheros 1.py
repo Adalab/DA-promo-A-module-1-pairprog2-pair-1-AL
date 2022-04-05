@@ -1,32 +1,53 @@
 import os
 
-#Primera Funcion
+#PRIMERA FUNCION
 
-def primera_fun():
+def primera_fun(nombre_carpeta, nombre_subcarpeta, cambio_nombre):
     print(os.getcwd())
+    ruta_carpeta = ('./' + nombre_carpeta)
     
-    if 'aprendiendo-ficheros' in os.listdir():
-        print('La carpeta ya existe')
-        os.chdir('./aprendiendo-ficheros')
+    if nombre_carpeta in os.listdir():
+        print('La carpeta', nombre_carpeta, 'ya existe')
+        os.chdir(ruta_carpeta)
         #print(os.getcwd())
-        if 'datos' in os.listdir('aprendiendo-ficheros'):
-            print('La carpeta datos ya existe')
+        if nombre_subcarpeta in os.listdir():
+            print('La carpeta', nombre_subcarpeta, 'ya existe')
         else:
-            os.mkdir('datos')
-            print('La carpeta datos ha sido creada')
+            os.mkdir(nombre_subcarpeta)
+            print('La carpeta', nombre_subcarpeta, 'ha sido creada')
     else:
-        os.mkdir('aprendiendo-ficheros')
+        os.mkdir(nombre_carpeta)
         print('La carpeta ha sido creada')
         
-        os.chdir('./aprendiendo-ficheros')
+        os.chdir(ruta_carpeta)
         #print(os.getcwd())
-        if 'datos' in 'aprendiendo-ficheros':
-            print('La carpeta datos ya existe')
+        if nombre_subcarpeta in nombre_carpeta:
+            print('La carpeta', nombre_subcarpeta, 'ya existe')
         else:
-            os.mkdir('datos')
-            print('La carpeta datos ha sido creada')
+            os.mkdir(nombre_subcarpeta)
+            print('La carpeta', nombre_subcarpeta, 'ha sido creada')
+    os.chdir('..')
+    os.rename(nombre_carpeta, cambio_nombre)
 
-   
-#os.rename('/home/adalaber/Descargas/saludo.txt', '')
+#primera_fun('aprendiendo-ficheros', 'datos', 'primera-toma-contacto')
 
-primera_fun()
+#SEGUNDA FUNCION
+
+def segunda_fun():
+    print('Porfavor introduzca la dirección del fichero')
+    #./primera-toma-contacto/datos 
+    ruta_fichero = input()
+    os.chdir(ruta_fichero)
+
+    #No se como utilizar el if y el else
+    
+    f = open('saludo.txt')
+    linea4 = f.readlines()
+    f.close()
+
+    print(linea4[3])
+
+
+
+
+segunda_fun()
