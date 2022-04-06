@@ -14,9 +14,9 @@ FUNCIONES 1:
 FUNCIONES 2:
 - 1 Hecho
 - 2 Hecho
-- 3 Lara
-- 4 Lara
-- 5
+- 3 Hecho
+- 4 Hecho
+- 5 Hecho
 
 FICHEROS 1:
 - Función 1 Hecha
