@@ -23,11 +23,12 @@ FICHEROS 1:
 - Función 2 Hecha
 
 FICHEROS 2:
-. Función 1 Alicia
+. Función 1 Hecha
 - Función 2 Alicia
 
 REGEX
-Continuamos el jueves en la hora de pair.
+1, 2, 3, 4
+TERMINADO
 
 ## SQL
 
