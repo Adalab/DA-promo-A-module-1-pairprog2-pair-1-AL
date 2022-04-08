@@ -1,12 +1,8 @@
+from email.headerregistry import ContentDispositionHeader
+
 # Ejercicios Pair Funciones 2
 
-# Ejercicio 1 - Calculadora de puntos
-# Vamos a crear una "Calculadora de puntos". Tenéis que escribir una calculadora que reciba cadenas de caracteres como entrada. Los puntos representarán el número de la ecuación. Habrá puntos en un lado, un operador, y puntos de nuevo después del oparador. Los puntos y el operador estarán separados por un espacio. Aquí os dejamos los operadores válidos: Suma Sustracción Multiplicación División de enteros
-
-# Tendréis que devolver un string que contenga puntos, tantos como devuelva la ecuación. Si el resultado es 0, devuelve la cadena vacía. Cuando se trata de una resta, el primer número siempre será mayor o igual que el segundo.
-
-
-from email.headerregistry import ContentDispositionHeader
+# Ejercicio 1 - Calculadora de puntos 
 
 
 def calculadora(string):
@@ -45,14 +41,15 @@ calculadora(string)
 
 
 # Ejercicio 2
-# Te despides de tu mejor amigo, "Nos vemos el próximo año". Vuestro trabajo: Dado un año, encuentra el próximo cumpleaños o el año más cercano en que verás a tu mejor amigo. Condiciones: Año por supuesto siempre positivo. El siguiente año que le felicites a tu mejor amigo no puede tener ningún dígito repetido.
+# Te despides de tu mejor amigo, "Nos vemos el próximo año". 
+#El siguiente año que le felicites a tu mejor amigo no puede tener ningún dígito repetido.
 
 def reencuentro(año):
     no_reen = False
     año = año + 1
 
     while no_reen == False:
-        repetido = 0  # El 0 y el 1 es como poner False y True respectivamente, el False/0 es que no tiene valor y el True/1 que hay un valor
+        repetido = 0  
         # convierto el año en una lista de strings ('7','7','1','2')
         lista_num = list(str(año))
         for str_num in lista_num:
@@ -68,12 +65,14 @@ def reencuentro(año):
 
 
 reencuentro(7712)
-reencuentro(1001)
-reencuentro(1123)
-reencuentro(2001)
+#reencuentro(1001)
+#reencuentro(1123)
+#reencuentro(2001)
 
 # Ejercicio 3
-# Tenéis que crear un función que chequee la vida de un evaporador que contiene un gas. Conocemos el contenido del evaporador (contenido en ml), el porcentaje de gas que se pierde cada día y el umbral en porcentaje a partir del cual el evaporador deja de ser útil. Todos los números serán estrictamente positivos. ⚠️ Nota: el contenido no es, de hecho, necesario en el cuerpo de la función, podéis utilizarlo o no.
+# Tenéis que crear un función que chequee la vida de un evaporador que contiene un gas. 
+# Conocemos el contenido del evaporador (contenido en ml), el porcentaje de gas que se pierde cada día 
+# y el umbral en porcentaje a partir del cual el evaporador deja de ser útil.
 
 
 def vida_evaporador(contenido, porcentaje, umbral):
@@ -93,12 +92,14 @@ def vida_evaporador(contenido, porcentaje, umbral):
 
 
 vida_evaporador(10, 10, 5)
+# = > 29
+#vida_evaporador(10, 10, 10) 
+# = > 22
 
-# 10, 10, 5 = > 29
-# 10, 10, 10 = > 22
 
 # Ejercicio 4
-# Definid una función que tome como argumento un entero y devuelva True o False dependiendo de si el número es primo o no. Según la Wikipedia, un número primo es un número natural mayor que 1 que no tiene divisores positivos más que 1 y él mismo.
+# Definid una función que tome como argumento un entero y devuelva True o False 
+# dependiendo de si el número es primo o no. 
 
 
 def soy_primo(num):
@@ -139,15 +140,16 @@ def soy_primo(num):
 
 print(soy_primo(-1))
 
-
 # 0 => False
 # 2 => True
 # 73 => True
 # -1 => False
 # 5099 => True
 
-# Ejercicio 5
-# Probablemente conozcais el sistema de "me gusta" de Facebook y otras páginas. La gente puede dar "me gusta" a las publicaciones del blog, a las imágenes o a otros elementos. Queremos crear el texto que debe mostrarse junto a dicho elemento. Cread una función que toma una lista que contiene los nombres de las personas a las que les gusta un artículo. Debe devolver el texto que se muestra en los ejemplos:
+
+# Ejercicio 5 
+# Cread una función que toma una lista que contiene los nombres de las personas a las que les gusta 
+# un artículo.
 
 def lista_likes(lista):
 

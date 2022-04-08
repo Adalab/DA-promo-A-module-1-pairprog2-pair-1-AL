@@ -1,5 +1,9 @@
 import xml.etree.ElementTree as ET
 
+# Qué tag y atributos tiene el archivo xml.
+# La descripción de cada una de las películas que tenemos en ese archivo.
+# Los años en que fueron estrenadas las películas.
+
 
 def segunda_funcion(nombre_archivo):
     archivo = ET.parse(nombre_archivo)

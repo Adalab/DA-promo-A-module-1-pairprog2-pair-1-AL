@@ -1,7 +1,7 @@
 import os
 import xml.etree.ElementTree as ET
 
-#Funcion 1
+#Funcion 1 (funcion 2 esta en otro python)
 #Si el fichero no existe, debe crearlo, insertar contenido y mostrar su contenido.
 #Si el fichero existe pregunta al usuario si quiere sobreescribirlo. 
 #En caso de Si, sobreescribe el fichero, insertad contenido y leedlo. En caso de No, no hace nada.
@@ -16,6 +16,8 @@ def lectura_txt(nombre, mode, encoding, contenido):
             file = open(ubicacion, "w")
             file.write(contenido)
             file.close()
+       else:
+          print('No se ha sobreescrito el archivo')
     else:
        print('El fichero no existe, se va a crear con el nombre', nombre)
        file = open(ubicacion, "w")

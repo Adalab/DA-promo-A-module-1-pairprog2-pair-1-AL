@@ -1,6 +1,8 @@
 
 # Ejercicio 1
-# Cread una función que reciba 2 números enteros en forma de string como entrada, y dé como resultado la suma (también en forma de string). Condiciones: Si los dos parámetros que recibe la función son strings vacíos la función nos debe devolver "0". Si el primer parámetro es un string vacío, la función nos devuelve el valor del segundo parámetro y viceversa.
+# Cread una función que reciba 2 números enteros en forma de string como entrada, 
+# y dé como resultado la suma (también en forma de string). 
+
 
 def funcion1(string1, string2):
     if string1 == "" and string2 == "":
@@ -23,9 +25,9 @@ funcion1("4", "5")
 #funcion1("2", "")
 #funcion1("-5", "3")
 
+
 # Ejercicio 2
 # Comparar cada par de enteros de 2 listas, y devolver una nueva lista de números grandes.
-
 
 def comparaciones(arr1, arr2):
     resultado = []
@@ -38,13 +40,15 @@ def comparaciones(arr1, arr2):
         i = i + 1
     print('resultado:', resultado)
 
-
 arr1 = [13, 64, 15, 17, 88]
 arr2 = [23, 14, 53, 17, 80]
 comparaciones(arr1, arr2)
 
+
 # Ejercicio 3
-# El objetivo de este ejercicio es convertir una string en un nuevo string en la que cada carácter de la nueva string es "(" si ese carácter aparece sólo una vez en la string original, o ")" si ese carácter aparece más de una vez en la string original. Nuestro código no tiene que ser case sensitive, es decir, si hay una letra en mayúscula y en minúscula cuenta como dos apariciones.
+# El objetivo de este ejercicio es convertir una string en un nuevo string en la que cada carácter 
+# de la nueva string es "(" si ese carácter aparece sólo una vez en la string original, o ")" 
+# si ese carácter aparece más de una vez en la string original. 
 
 
 def parentesis(string):
@@ -61,7 +65,6 @@ def parentesis(string):
 
 
 # Strings para probar:
-
 #string = "din"
 #   =>  "((("
 #string = "recede"
